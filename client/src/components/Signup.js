@@ -9,7 +9,7 @@ const Signup = () => {
   const nameRef = useRef();
   const psdRef = useRef();
   const { registerUser } = useUserContext();
-  const usersCollectionRef = collection(db, "users");
+  const usersCollectionRef = collection(db, "hospitals");
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -17,7 +17,7 @@ const Signup = () => {
     const name = nameRef.current.value;
     const password = psdRef.current.value;
 
-    addDoc(usersCollectionRef, { Uname: name, Uemail: email });
+    addDoc(usersCollectionRef, { HospitalName: name, HospitalEmail: email });
 
     if (email && password && name) registerUser(email, password, name);
   };
