@@ -1,0 +1,53 @@
+.patientCard {
+    background-color: orange;
+    width: 23rem;
+    height: 35rem;
+    margin: 4rem 4.2rem;
+    border-radius: 2rem;
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: all ease-in-out 0.3s;
+  }
+  
+  .patientCard:hover {
+    transform: translate(0%, -8%);
+    box-shadow: 0 1.5rem 0.5rem -1rem rgba(0, 0, 0, 0.5);
+  }
+  
+  .patientImg {
+    height: 16rem;
+    width: 16rem;
+    object-fit: cover;
+    border-radius: 100%;
+  }
+  
+  .patientName {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: 0.2rem solid aqua;
+  }
+  
+  .patientMobile, 
+  .patientDisease,
+  .patientAdd{
+    color: white;
+    font-size: 1.5rem;
+    margin-top: -0.2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .myButton{
+    border: none;
+    color: #000060;
+    cursor: pointer;
+    width: 50%;
+    padding: 0.5rem 0.5rem;
+    background-color: aqua;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0.2rem 3rem;
+    border-radius: .7rem;
+  }
+  
