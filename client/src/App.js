@@ -12,8 +12,8 @@ function App() {
       {error && <p className="error">{error}</p>}
 
       {loading ? (
-        <div>
-          <h2>Loading.....</h2>{" "}
+        <div style={{textAlign: "center", fontSize: "12rem", fontWeight: "bold", marginTop: "20%"}}>
+          <h2 style={{ fontSize: "4rem", fontFamily: "cursive"}}>Loading.....</h2>{" "}
         </div>
       ) : (
         <>{user ? <MainScreen /> : <Auth />}</>

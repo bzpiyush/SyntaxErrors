@@ -1,5 +1,5 @@
 import React from "react";
-import {Link, NavLink} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import {useUserContext} from '../context/UserContext'
 
 import './Navbar.css'
@@ -12,9 +12,7 @@ function Navbar() {
       <div>
           <div className="Navbar">
           <div className="NavbarLeft">
-            <Link to="/" className="Logo">
-             DoCall
-           </Link>
+            HospitalConnect
           </div>
 
            <div className="NavbarRight">
@@ -62,7 +60,7 @@ function Navbar() {
         })}
         >Patients
         </NavLink>
-        <button type="button" className="btn btn-warning btn-lg" onClick={logoutUser}>Log out</button>
+        <button style={{color: "white", fontSize: "1.4rem"}} type="button" className="btn btn-warning btn-lg" onClick={logoutUser}>Log out</button>
            </div>
         </div>
       </div>

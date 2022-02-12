@@ -11,7 +11,10 @@
 
 .NavbarLeft{
     flex : 0.4;
-    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: monospace;
+    color: orange;
 }
 
 .NavbarRight{
@@ -34,13 +37,9 @@
 
 .Links{
    padding: 0.3rem 1.5rem;
-   background-color: pink;
+   background-color: aqua;
    border-radius: 0.6rem;
    text-decoration: none;
-}
-
-.SignUp{
-    background-color: aqua;
 }
 
 .Links:active,

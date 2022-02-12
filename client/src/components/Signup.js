@@ -85,14 +85,14 @@ text-align : center;
         }
 
         >button{
-          padding: 9px;
+          padding: 0.5rem;
           margin-top: 1.5rem ;
           margin-bottom: 1.7rem;
           width: 40%;
           background-color: white;
-          font-size: 15px;
+          font-size: 1.7rem;
           font-weight: bold;
-          font-family: cursive;
+          font-family: monospace;
           color: black;
           border: 0.4rem orange solid;
           border-radius: 1rem;
