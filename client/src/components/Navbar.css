@@ -1,0 +1,49 @@
+.Navbar{
+    padding: 0.4rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: 1.7rem;
+    height: 5rem;
+    border-bottom: solid 0.2rem grey;
+    text-decoration: none;
+}
+
+.NavbarLeft{
+    flex : 0.4;
+    text-decoration: none;
+}
+
+.NavbarRight{
+    flex : 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.5rem; 
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white; 
+}
+
+.Logo{
+    font-size: 2.5rem;
+    font-family: monospace;
+    font-weight: bolder ;
+    text-align: center;
+}
+
+.Links{
+   padding: 0.3rem 1.5rem;
+   background-color: pink;
+   border-radius: 0.6rem;
+   text-decoration: none;
+}
+
+.SignUp{
+    background-color: aqua;
+}
+
+.Links:active,
+.Links:hover{
+    filter: brightness(1.05);
+}

@@ -26,7 +26,7 @@ const Signup = () => {
     <div className="form">
       <WebName>Welcome To Hospital Connect</WebName>
       <SignUp>
-        <h2> New User</h2>
+        <h2>Register</h2>
         <form onSubmit={onSubmit}>
           <input placeholder="Email" type="email" ref={emailRef} />
           <br />
