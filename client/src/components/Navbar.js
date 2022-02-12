@@ -60,6 +60,24 @@ function Navbar() {
         })}
         >Patients
         </NavLink>
+        <NavLink 
+        to="/patient" 
+        className= "Login Links"
+        style={isActive => ({
+          color: isActive ? "#000060" : "000060"
+        
+        })}
+        >Patients
+        </NavLink>
+        <NavLink 
+        to="/addpatient" 
+        className= "Login Links"
+        style={isActive => ({
+          color: isActive ? "#000060" : "000060"
+        
+        })}
+        >Add
+        </NavLink>
         <button style={{color: "white", fontSize: "1.4rem"}} type="button" className="btn btn-warning btn-lg" onClick={logoutUser}>Log out</button>
            </div>
         </div>
