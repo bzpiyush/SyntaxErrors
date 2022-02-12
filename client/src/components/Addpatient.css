@@ -1,0 +1,29 @@
+.myForm{
+    margin-top: 8rem;
+    background-color: orange;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.myHead{
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    font-family: monospace;
+}
+
+.myInput{
+    margin: 2rem;
+    width: 35rem;
+    border: 0.01rem orange solid;
+}
+
+.myBtn{
+   margin-top: 1rem;
+   font-size: 2rem;
+   margin-left: 40%;
+   background-color: aqua;
+   color: black;
+}
