@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { collection, addDoc } from "firebase/firestore";
-import styled from "styled-components"
 import { useUserContext } from "../context/UserContext";
+import styled from "styled-components"
 import { db } from "../firebase/firebase-config";
 
 const Signup = () => {
@@ -17,9 +17,11 @@ const Signup = () => {
     const name = nameRef.current.value;
     const password = psdRef.current.value;
 
-    addDoc(usersCollectionRef, { HospitalName: name, HospitalEmail: email});
-
-    if (email && password && name) registerUser(email, password, name);
+    if (email && password && name) 
+    {
+      registerUser(email, password, name);
+      addDoc(usersCollectionRef, { HospitalName: name, HospitalEmail: email});
+    }
   };
 
   return (
@@ -44,7 +46,7 @@ const Signup = () => {
 export default Signup;
 
 const WebName = styled.div`
-margin-top: 2rem;
+padding-top: 2rem;
 font-size: 4rem;
 font-family: monospace;
 text-align: center;

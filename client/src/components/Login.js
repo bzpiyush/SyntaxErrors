@@ -46,7 +46,7 @@ const Login = () => {
 export default Login;
 
 const WebName = styled.div`
-  margin-top: 2rem;
+  padding-top: 2rem;
   font-size: 4rem;
   font-family: monospace;
   text-align: center;

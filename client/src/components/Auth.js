@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 import Login from "./Login";
 import Signup from "./Signup";
 
@@ -8,6 +9,7 @@ const Auth = () => {
     setIndex((prevState) => !prevState);
   };
   return (
+    <Mydiv>
     <div className="container">
       {!index ? <Login /> : <Signup />}
       <div>
@@ -16,7 +18,15 @@ const Auth = () => {
         </p>
       </div>
     </div>
+    </Mydiv>
   );
 };
 
 export default Auth;
+
+const Mydiv = styled.div`
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-image: url("https://wallpaperboat.com/wp-content/uploads/2019/06/medical-05.jpg");
+`;
