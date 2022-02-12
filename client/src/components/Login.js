@@ -46,8 +46,8 @@ const Login = () => {
 export default Login;
 
 const WebName = styled.div`
-  margin-top: 20px;
-  font-size: 40px;
+  margin-top: 2rem;
+  font-size: 4rem;
   font-family: monospace;
   text-align: center;
   text-decoration: none;
@@ -55,15 +55,13 @@ const WebName = styled.div`
 
 const Form = styled.div`
    
-  
-   padding: 0 0rem 1rem 0rem;
+   padding: 0 0rem 0.5rem 0rem;
    margin-left: 30%;
    margin-right: 30%;
    margin-top: 8rem;
    
    border-radius: 2rem;
    background-color: orange;
-  //  background: linear-gradient(to top left, #00CED1, aqua);
    text-align : center; 
 
    >h2{
@@ -78,12 +76,15 @@ const Form = styled.div`
     >form{
       margin-top: 2rem;
       >input{
+        font-size: 1.4rem;
         color: black;
         height: 3rem;
         width: 70%;
         margin: 1rem;        
         padding: 2px 4px;
         outline: none;
+        border: 0.1rem orange solid;
+        border-radius: 0.5rem;
         }
 
         >button{

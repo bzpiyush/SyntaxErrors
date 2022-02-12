@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { collection, addDoc } from "firebase/firestore";
-
+import styled from "styled-components"
 import { useUserContext } from "../context/UserContext";
 import { db } from "../firebase/firebase-config";
 
@@ -24,8 +24,8 @@ const Signup = () => {
 
   return (
     <div className="form">
-      <div>Welcome To HospitalConnect</div>
-      <div>
+      <WebName>Welcome To Hospital Connect</WebName>
+      <SignUp>
         <h2> New User</h2>
         <form onSubmit={onSubmit}>
           <input placeholder="Email" type="email" ref={emailRef} />
@@ -36,9 +36,71 @@ const Signup = () => {
           <br />
           <button type="submit">Register</button>
         </form>
-      </div>
+      </SignUp>
     </div>
   );
 };
 
 export default Signup;
+
+const WebName = styled.div`
+margin-top: 2rem;
+font-size: 4rem;
+font-family: monospace;
+text-align: center;
+text-decoration: none;
+`;
+
+const SignUp = styled.div`
+padding: 0 0rem 1rem 0rem;
+margin-left: 30%;
+margin-right: 30%;
+margin-top: 8rem;
+
+border-radius: 2rem;
+background-color: orange;
+text-align : center; 
+
+  >h2{
+    background-color: aqua;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    padding: 1rem;
+    font-size : 35px;
+    text-align: center;
+   }
+    
+    >form{
+      margin-top: 2rem;
+      >input{
+        font-size: 1.4rem;
+        color: black;
+        height: 3rem;
+        width: 70%;
+        margin: 1rem;        
+        padding: 2px 4px;
+        outline: none;
+        border: 0.1rem orange solid;
+        border-radius: 0.5rem;
+        }
+
+        >button{
+          padding: 9px;
+          margin-top: 1.5rem ;
+          margin-bottom: 1.7rem;
+          width: 40%;
+          background-color: white;
+          font-size: 15px;
+          font-weight: bold;
+          font-family: cursive;
+          color: black;
+          border: 0.4rem orange solid;
+          border-radius: 1rem;
+          :hover{
+            cursor: pointer;
+            background-color: aqua;
+          }
+        }
+
+
+`;
