@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import styled from 'styled-components'
 import { useUserContext } from "../context/UserContext";
 
 const Login = () => {
@@ -24,9 +25,9 @@ const Login = () => {
 
   return (
     <>
-      <p>Welcome To Hospital Connect</p>
+      <WebName>Welcome To Hospital Connect</WebName>
       <div className="form">
-        <div>
+        <Form>
           <h2> Login </h2>
           <form onSubmit={onSubmit}>
             <input placeholder="Email" type="email" ref={emailRef} />
@@ -36,10 +37,85 @@ const Login = () => {
             <button type="submit">Sign In</button>
             <p onClick={forgotPasswordHandler}>Forgot Password?</p>
           </form>
-        </div>
+        </Form>
       </div>
     </>
   );
 };
 
 export default Login;
+
+const WebName = styled.div`
+  margin-top: 20px;
+  font-size: 40px;
+  font-family: monospace;
+  text-align: center;
+  text-decoration: none;
+`;
+
+const Form = styled.div`
+   
+  
+   padding: 0 0rem 1rem 0rem;
+   margin-left: 30%;
+   margin-right: 30%;
+   margin-top: 8rem;
+   
+   border-radius: 2rem;
+   background-color: orange;
+  //  background: linear-gradient(to top left, #00CED1, aqua);
+   text-align : center; 
+
+   >h2{
+     background-color: aqua;
+     border-top-left-radius: 2rem;
+     border-top-right-radius: 2rem;
+     padding: 1rem;
+     font-size : 35px;
+     text-align: center;
+   }
+    
+    >form{
+      margin-top: 2rem;
+      >input{
+        color: black;
+        height: 3rem;
+        width: 70%;
+        margin: 1rem;        
+        padding: 2px 4px;
+        outline: none;
+        }
+
+        >button{
+          padding: 9px;
+          margin-top: 1.5rem ;
+          margin-bottom: 0.5rem;
+          width: 40%;
+          background-color: white;
+          font-size: 15px;
+          font-weight: bold;
+          font-family: cursive;
+          color: black;
+          border: 0.4rem orange solid;
+          border-radius: 1rem;
+          :hover{
+            cursor: pointer;
+            background-color: aqua;
+          }
+        }
+
+        >p{
+          padding-top: 1rem;
+          padding-bottom: 1.3rem;
+          font-weight: bold;
+          font-size: 20px;
+          font-family: cursive;
+          colr: grey;
+          :hover{
+            cursor: pointer;
+            color: black;
+          }
+        }
+      }
+    }
+`;
