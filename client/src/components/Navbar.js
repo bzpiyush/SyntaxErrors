@@ -8,7 +8,7 @@ function Navbar() {
   return(
       <div>
           Navbar
-          <button onClick={logoutUser}>Log out</button>
+          <button type="button" className="btn btn-primary" onClick={logoutUser}>Log out</button>
       </div>
   )
 }
