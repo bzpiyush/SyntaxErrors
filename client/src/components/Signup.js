@@ -17,10 +17,12 @@ const Signup = () => {
     const name = nameRef.current.value;
     const password = psdRef.current.value;
 
+    const date = Date.now();
+
     if (email && password && name) 
     {
       registerUser(email, password, name);
-      addDoc(usersCollectionRef, { HospitalName: name, HospitalEmail: email});
+      addDoc(usersCollectionRef, { HospitalName: name, HospitalEmail: email, id: date});
     }
   };
 

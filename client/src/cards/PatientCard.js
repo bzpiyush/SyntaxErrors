@@ -9,6 +9,34 @@ function PatientCard({ patientName, patientMobile, patientDisease, patientImg, p
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true)
 
+  const submitHandler = (e) => {
+    e.preventDefault();
+   
+    fetch('http://localhost:5000/enterpatient', {
+     method: 'POST', // or 'PUT'
+     headers: {
+        'Content-Type': 'application/json',
+    },
+
+     body: JSON.stringify(
+      {"hid" : e.target[0].value,
+      "pid" : e.target[1].value,
+      "ref" : "yes",
+      "name": e.target[2].value,
+      "disease" :  e.target[3].value
+      })
+})
+
+ .then(response => response.json())
+ .then(data => {
+ 
+ console.log("HI HELLO");
+})
+.catch((error) => {
+//console.error('Error:', error);
+});
+}
+
   return (
     <>
       <div className="patientCard">
@@ -21,19 +49,55 @@ function PatientCard({ patientName, patientMobile, patientDisease, patientImg, p
 
         <Modal show={show} onHide={handleClose} centered>
         <Modal.Header closeButton>
-          <Modal.Title>Enter Name Of Hospital To Refer To</Modal.Title>
+          <Modal.Title>Enter ID Of Hospital To Refer To</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <input style={{width:"100%", fontSize: "1.7rem", padding: "1rem", outline: "none"}} placeholder="Hospital Name">
-          </input>
+          <form onSubmit= {submitHandler}>
+          <div className="form-group myInput">
+            <input
+              type="text"
+              className="form-control form-control-lg"
+              placeholder="Enter Hospital ID"
+              name="hospitalID"
+              
+            />
+          </div>
+          <div className="form-group myInput">
+            <input
+              type="text"
+              className="form-control form-control-lg"
+              placeholder="Enter Patient ID"
+              name="patientID"
+              
+            />
+          </div>
+          <div className="form-group myInput">
+            <input
+              type="text"
+              className="form-control form-control-lg"
+              placeholder="Enter Patient Name"
+              name="patientName"
+              
+            />
+          </div>
+          <div className="form-group myInput">
+            <input
+              type="text"
+              className="form-control form-control-lg"
+              placeholder="Enter Patient Disease"
+              name="patientDisease"
+              
+            />
+          </div>
+
+          <button className="btn btn-primary btn-lg myBtn">Save Changes</button>
+          </form>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" size="lg" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" size="lg"onClick={handleClose}>
-            Save Changes
-          </Button>
+
         </Modal.Footer>
       </Modal>
       </div>

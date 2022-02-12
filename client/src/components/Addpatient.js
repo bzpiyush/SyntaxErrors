@@ -2,19 +2,47 @@ import React from "react";
 import './Addpatient.css'
 
 function Addpatient(){
+
+  const submitHandler = (e) => {
+       e.preventDefault();
+      
+       fetch('http://localhost:5000/enterpatient', {
+        method: 'POST', // or 'PUT'
+        headers: {
+           'Content-Type': 'application/json',
+       },
+
+        body: JSON.stringify(
+         {"hid" : "1",
+         "pid" : e.target[0].value,
+         "ref" : "no",
+         "name": e.target[1].value,
+         "disease" :  e.target[4].value
+         })
+   })
+
+    .then(response => response.json()) //Will get Success Response String/Array
+    .then(data => {
+    
+    console.log("HI HELLO");
+})
+.catch((error) => {
+  //console.error('Error:', error);
+});
+  }
+
     return(
           <div className="container">
-      <div className="w-75 mx-auto shadow p-5  myForm">
+      <div className="w-75 mx-auto shadow p-5  myForm ">
         <h2 className="text-center mb-4 myHead">Add A Patient</h2>
-        <form>
+        <form onSubmit= {submitHandler}>
           <div className="form-group myInput">
             <input
               type="text"
               className="form-control form-control-lg"
               placeholder="Enter Patient Id"
               name="pid"
-            //   value={name}
-            //   onChange={e => onInputChange(e)}
+              
             />
           </div>
           <div className="form-group myInput">
@@ -23,8 +51,7 @@ function Addpatient(){
               className="form-control form-control-lg"
               placeholder="Enter Patient Name"
               name="patientName"
-            //   value={username}
-            //   onChange={e => onInputChange(e)}
+              
             />
           </div>
           <div className="form-group myInput">
@@ -33,8 +60,7 @@ function Addpatient(){
               className="form-control form-control-lg"
               placeholder="Enter Patient E-mail Address"
               name="patientEmail"
-            //   value={email}
-            //   onChange={e => onInputChange(e)}
+              
             />
           </div>
           <div className="form-group myInput">
@@ -43,8 +69,7 @@ function Addpatient(){
               className="form-control form-control-lg"
               placeholder="Enter Patient Phone Number"
               name="patientPhone"
-            //   value={phone}
-            //   onChange={e => onInputChange(e)}
+              
             />
           </div>
           <div className="form-group myInput">
@@ -53,8 +78,7 @@ function Addpatient(){
               className="form-control form-control-lg"
               placeholder="Enter Patient Disease"
               name="patientDisease"
-            //   value={website}
-            //   onChange={e => onInputChange(e)}
+              
             />
           </div>
           <button className="btn btn-primary btn-lg myBtn">Add User</button>
