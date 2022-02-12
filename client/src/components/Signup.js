@@ -17,7 +17,7 @@ const Signup = () => {
     const name = nameRef.current.value;
     const password = psdRef.current.value;
 
-    addDoc(usersCollectionRef, { HospitalName: name, HospitalEmail: email });
+    addDoc(usersCollectionRef, { HospitalName: name, HospitalEmail: email});
 
     if (email && password && name) registerUser(email, password, name);
   };
