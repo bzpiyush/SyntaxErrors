@@ -12,7 +12,8 @@ function Navbar() {
       <div>
           <div className="Navbar">
           <div className="NavbarLeft">
-            HospitalConnect
+            Hospital Connect
+            
           </div>
 
            <div className="NavbarRight">

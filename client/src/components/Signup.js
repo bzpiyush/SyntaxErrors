@@ -48,7 +48,7 @@ export default Signup;
 const WebName = styled.div`
 padding-top: 2rem;
 font-size: 4rem;
-font-family: monospace;
+font-family: fantasy;
 text-align: center;
 text-decoration: none;
 `;
@@ -60,11 +60,11 @@ margin-right: 30%;
 margin-top: 8rem;
 
 border-radius: 2rem;
-background-color: orange;
+background-color: darkgrey;
 text-align : center; 
 
   >h2{
-    background-color: aqua;
+    background-color: darkgrey;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
     padding: 1rem;
@@ -82,7 +82,7 @@ text-align : center;
         margin: 1rem;        
         padding: 2px 4px;
         outline: none;
-        border: 0.1rem orange solid;
+        border: 0.1rem grey solid;
         border-radius: 0.5rem;
         }
 
@@ -96,11 +96,11 @@ text-align : center;
           font-weight: bold;
           font-family: monospace;
           color: black;
-          border: 0.4rem orange solid;
+          border: 0.1rem grey solid;
           border-radius: 1rem;
           :hover{
             cursor: pointer;
-            background-color: aqua;
+            background-color: grey;
           }
         }
 
