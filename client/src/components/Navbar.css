@@ -5,16 +5,21 @@
     justify-content: left;
     font-size: 1.7rem;
     height: 5rem;
-    border-bottom: solid 0.2rem grey;
+    border-bottom: solid 0.2rem black;
     text-decoration: none;
 }
 
 .NavbarLeft{
     flex : 0.4;
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: bold;
     font-family: monospace;
-    color: orange;
+    color: grey
+}
+.NavbarLeft:active,
+.NavbarLeft:hover{
+    
+    filter: drop-shadow(16px 16px 10px darkgrey);
 }
 
 .NavbarRight{
@@ -24,7 +29,7 @@
     justify-content: space-evenly;
     font-size: 1.5rem; 
     font-family: sans-serif;
-    font-weight: bold;
+    font-weight: bolder;
     color: white; 
 }
 
@@ -37,8 +42,8 @@
 
 .Links{
    padding: 0.3rem 1.5rem;
-   background-color: aqua;
-   border-radius: 0.6rem;
+   background-color: darkgrey;
+   border-radius: 0.9rem;
    text-decoration: none;
    width: 9rem;
    text-align: center;
@@ -46,5 +51,8 @@
 
 .Links:active,
 .Links:hover{
-    filter: brightness(1.05);
+    
+    filter: hue-rotate(90deg);
+    filter: drop-shadow(16px 16px 10px lightblue);
+    background-color:aqua
 }

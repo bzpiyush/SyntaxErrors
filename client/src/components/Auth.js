@@ -28,5 +28,8 @@ const Mydiv = styled.div`
   height: 100vh;
   width: 100vw;
   margin: 0;
-  background-image: url("https://wallpaperboat.com/wp-content/uploads/2019/06/medical-05.jpg");
+  background-size:cover;
+  background-position:top;
+  background-repeat:no-repeat;
+  background-image: url("https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bWVkaWNpbmV8ZW58MHx8MHx8&w=1000&q=80");
 `;
