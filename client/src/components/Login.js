@@ -96,7 +96,7 @@ const Form = styled.div`
           background-color: white;
           font-size: 1.7rem;
           font-weight: bold;
-          font-family: monospace;
+          font-family: ;
           color: black;
           border: 0.1rem grey solid;
           border-radius: 1rem;

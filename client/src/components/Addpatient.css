@@ -1,6 +1,6 @@
 .myForm{
     margin-top: 8rem;
-    background-color: orange;
+    background-color: aqua;
     border-radius: 2rem;
     display: flex;
     flex-direction: column;
@@ -15,15 +15,18 @@
 }
 
 .myInput{
-    margin: 2rem;
-    width: 35rem;
-    border: 0.01rem orange solid;
+    margin: 2rem 5rem;
+    width: 50rem;
+    border: 0.01rem black;
+    border-radius:0.5rem;
 }
 
 .myBtn{
-   margin-top: 1rem;
+   margin-left: 3rem;
    font-size: 2rem;
-   margin-left: 40%;
-   background-color: aqua;
+   width:80rem;
+   
+   position:relative;
+   background-color: grey;
    color: black;
 }

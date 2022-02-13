@@ -43,7 +43,7 @@ function PatientPage()
 
   return(
     <div className="patientPage">
-      <button onClick={submithandler} className="btn btn-warning btn-lg showBtn" style={{fontSize: "1.6rem", marginBottom: "3rem"}}>Show Patients</button>
+      <button onClick={submithandler} className="showBtn" >Show Patients</button>
       <div className="patientCards">
         {patients.map((patient) => (
           <div key={patient.pid}>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 
 import './Home.css';
 
@@ -11,18 +11,7 @@ function Home() {
                <div className="textBox">
               <p className="upperBig1"><span>Caring__</span><span>Collaboration__</span><span>Connection</span></p>
               <p className="upperSmall">Improving the lives of our patient and their families</p>
-              <div className="topButtons">
-                 <span>
-                     <Link to="/consult">
-                     <button className="btn consultBtn">Refer</button>
-                     </Link>
-                 </span>
-                 <span>
-                     <Link to="/predict">
-                     <button className="btn predictBtn">Register</button>
-                     </Link>
-                 </span>
-              </div>
+              <p className="upperSmall">Providing better connectivity between Hospitals</p>
               </div>
            </div>
            <div className="lower">
@@ -72,8 +61,8 @@ function Home() {
            </div>
           <div className="Footer">
               <div className="brand column">
-                  <p className="brandName">DoCall</p>
-                  <p className="brandCopy">&copy; Docall 2022</p>
+                  <p className="brandName">Hospital Connect</p>
+                  <p className="brandCopy">&copy;SyntaxErrors 2022</p>
               </div>
               <div className="column">
                   <p className="FootHead">Contact Us</p>

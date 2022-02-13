@@ -5,6 +5,7 @@
     justify-content: left;
     font-size: 1.7rem;
     height: 5rem;
+    background-color:rgb(248, 213, 213);
     border-bottom: solid 0.2rem black;
     text-decoration: none;
 }
@@ -55,4 +56,15 @@
     filter: hue-rotate(90deg);
     filter: drop-shadow(16px 16px 10px lightblue);
     background-color:aqua
+}
+
+.logoutbtn{
+    color:black;
+    font-size:2rem;
+    padding:0.2rem 0.4rem;
+    background-color:aqua;
+    border-radius:0.8rem;
+}
+.logoutbtn:hover{
+    background-color:yellow;
 }

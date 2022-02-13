@@ -36,7 +36,7 @@ function Refered() {
 
     return(
         <div className="referedPage">
-          <button className = "btn btn-warning btn-lg myBtn" onClick={submitHandler}>
+          <button className = "myBtn" onClick={submitHandler}>
               Show Refered Patients
           </button>
           <div className="patientCards">

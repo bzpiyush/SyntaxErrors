@@ -1,5 +1,11 @@
 .patientPage{
-  margin: 2rem 0;
+  background-image:url("https://www.pilotpartners.com.au/wp-content/uploads/2019/08/iStock-1001713236-medical-plain.jpg");
+  padding: 0.2rem 0;
+  height:93vh;
+  
+  background-repeat:no-repeat;
+  background-position:left;
+  object-fit:cover;
   text-align: center;
 }
 
@@ -9,3 +15,20 @@
     justify-content: center;
     align-items: center;
   }
+  .showBtn{
+    margin: 5rem 0;
+    width:50%;
+    border:3px solid grey;
+    border-radius:0.8rem;
+    height:5rem;
+    background-color:aqua;
+    font-size:2.5rem;
+    
+}
+
+.showBtn:hover{
+    transform: translate(0%, -8%);
+    box-shadow: 0 1.5rem 0.5rem -1rem rgba(0, 0, 0, 0.5);
+    background:lightgrey;
+    border:1px solid lightgrey;
+}

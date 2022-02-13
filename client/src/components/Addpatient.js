@@ -82,7 +82,7 @@ function Addpatient(){
               
             />
           </div>
-          <button className="btn btn-primary btn-lg myBtn">Add User</button>
+          <button className="myBtn" style={{marginLeft :"14rem"}}>Add User</button>
         </form>
       </div>
     </div>

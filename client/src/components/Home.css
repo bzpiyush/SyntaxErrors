@@ -49,7 +49,8 @@
 .upperSmall{
     font-size: 1.8rem;
     font-weight: normal;
-    font-style: sans-seriff;
+    font-style: sans-serif;
+    line-height:1.4rem;
     color: grey;
 }
 
@@ -141,7 +142,7 @@
 .card{
     flex-direction: row;
     background: linear-gradient(to top left, #00CED1, aqua);
-    height: 37rem;
+    height: 20rem;
     width: 27rem;
     margin: 5rem;
     border-radius: 0.7rem;

@@ -59,7 +59,7 @@ function Navbar() {
         })}
         >Add
         </NavLink>
-        <button style={{color: "white", fontSize: "1.4rem"}} type="button" className="btn btn-warning btn-lg" onClick={logoutUser}>Log out</button>
+        <button type="button" className="logoutbtn" onClick={logoutUser}>Log out</button>
            </div>
         </div>
       </div>
