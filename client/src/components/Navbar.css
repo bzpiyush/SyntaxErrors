@@ -40,6 +40,8 @@
    background-color: aqua;
    border-radius: 0.6rem;
    text-decoration: none;
+   width: 9rem;
+   text-align: center;
 }
 
 .Links:active,

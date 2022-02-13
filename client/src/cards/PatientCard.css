@@ -1,8 +1,8 @@
 .patientCard {
     background-color: orange;
     width: 23rem;
-    height: 35rem;
-    margin: 4rem 4.2rem;
+    height: 20rem;
+    margin: 3rem 4.2rem;
     border-radius: 2rem;
     padding: 1rem 1rem;
     font-size: 1.5rem;
@@ -15,18 +15,12 @@
     box-shadow: 0 1.5rem 0.5rem -1rem rgba(0, 0, 0, 0.5);
   }
   
-  .patientImg {
-    height: 16rem;
-    width: 16rem;
-    object-fit: cover;
-    border-radius: 100%;
-  }
   
   .patientName {
     color: white;
     font-size: 2rem;
     font-weight: bold;
-    border-bottom: 0.2rem solid aqua;
+    border-bottom: 0.3rem solid aqua;
   }
   
   .patientMobile, 

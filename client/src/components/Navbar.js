@@ -30,17 +30,6 @@ function Navbar() {
           About
         </NavLink>
         <NavLink
-          className="Consult Links"
-          style={isActive => ({
-            color: isActive ? "#000060" : "000060"
-          
-          })}
-          to="/referal"
-          
-        >
-          Referal
-        </NavLink>
-        <NavLink
           className="Predict Links"
           style={isActive => ({
             color: isActive ? "#000060" : "000060"
@@ -50,15 +39,6 @@ function Navbar() {
           
         >
           Refered
-        </NavLink>
-        <NavLink 
-        to="/patient" 
-        className= "Login Links"
-        style={isActive => ({
-          color: isActive ? "#000060" : "000060"
-        
-        })}
-        >Patients
         </NavLink>
         <NavLink 
         to="/patient" 

@@ -3,7 +3,7 @@ import {Modal, Button} from "react-bootstrap";
 
 import "./PatientCard.css";
 
-function PatientCard({ patientName, patientMobile, patientDisease, patientImg, patientAdd }) {
+function PatientCard({ patientName, patientId, patientDisease }) {
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -40,11 +40,9 @@ function PatientCard({ patientName, patientMobile, patientDisease, patientImg, p
   return (
     <>
       <div className="patientCard">
-        <img className="patientImg" src={patientImg} alt="patient"></img>
         <p className="patientName">{patientName}</p>
-        <p className="patientDisease">Disease: {patientDisease}</p>
-        <p className="patientMobile">Mobile: {patientMobile}</p>
-        <p className="patientAdd">Addres: {patientAdd}</p>
+        <p className="patientDisease">Medical History: {patientDisease}</p>
+        <p className="patientMobile">PId: {patientId}</p>
         <button className="myButton" onClick={handleShow}>Refer</button>
 
         <Modal show={show} onHide={handleClose} centered>

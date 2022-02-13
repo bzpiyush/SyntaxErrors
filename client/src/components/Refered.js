@@ -1,20 +1,20 @@
 import React, {useState} from "react";
-import PatientCard from "../cards/PatientCard";
-import { useUserContext } from "../context/UserContext";
+import {useUserContext} from "../context/UserContext"
+import PatientCard from "../cards/PatientCard"
 
-import './PatientPage.css'
+import "./Refered.css"
 
-function PatientPage() 
-{
+function Refered() {
+
   const {user} = useUserContext();
+
   const [patients, setPatients] = useState([]);
 
   const setData = ({ items }) => {
     setPatients(items);
   };
 
-
-  const submithandler=(e)=>{
+  const submitHandler=(e)=>{
     e.preventDefault();
     
   fetch('http://localhost:5000/enterpatient', {
@@ -36,10 +36,12 @@ function PatientPage()
     
   }
 
-  return(
-    <div className="patientPage">
-      <button onClick={submithandler} className="btn btn-warning btn-lg showBtn" style={{fontSize: "1.6rem", marginBottom: "3rem"}}>Show Patients</button>
-      <div className="patientCards">
+    return(
+        <div className="referedPage">
+          <button className = "btn btn-warning btn-lg myBtn" onClick={submitHandler}>
+              Show Refered Patients
+          </button>
+          <div className="patientCards">
         <PatientCard 
           patientName= "John Singh"
           patientId= "547869441235"
@@ -55,8 +57,8 @@ function PatientPage()
           </div>
         })}
       </div>
-      </div>
-  )
+        </div>
+    )
 }
 
-export default PatientPage;
+export default Refered
