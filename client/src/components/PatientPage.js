@@ -1,5 +1,4 @@
 import React from "react";
-
 import PatientCard from "../cards/PatientCard";
 import { useUserContext } from "../context/UserContext";
 
@@ -11,7 +10,8 @@ function PatientPage()
 
   const submithandler=(e)=>{
     e.preventDefault();
-    fetch('http://localhost:5000/enterpatient', {
+    
+  fetch('http://localhost:5000/enterpatient', {
   method: 'POST', // or 'PUT'
   headers: {
     'Content-Type': 'application/json',
@@ -32,10 +32,6 @@ function PatientPage()
 });
     
   }
-  
-  
-
-// >>>>>>> ceb9d4c71967c19e7f9fc87af7044bbd84a7a6fc
 
   return(
       <div className="patientCards">
