@@ -9,8 +9,8 @@ function Home() {
           <div className="HomeTop">
            <div className="upper">
                <div className="textBox">
-              <p className="upperBig">Caring   Collaboration  Connection  </p>
-              <p className="upperSmall">Improving the lives of our patient anf their families</p>
+              <p className="upperBig1"><span>Caring__</span><span>Collaboration__</span><span>Connection</span></p>
+              <p className="upperSmall">Improving the lives of our patient and their families</p>
               <div className="topButtons">
                  <span>
                      <Link to="/consult">

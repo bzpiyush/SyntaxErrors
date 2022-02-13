@@ -21,9 +21,8 @@
 .textBox{
     position: absolute;
     text-align: center;
-    padding: 1.5rem 1.5rem;
+    width: 130rem;
     
-    text-transform:lowercase;
     color:black;
     background-color: white;
     border-radius: 1.5rem;
@@ -32,18 +31,29 @@
     transform: translate(-50%, -50%);
 }
 
-.upperBig{
+.upperBig1 span{
     text-transform: uppercase;
     font-size: 3.2rem;
-    word-spacing:16px;
+    word-spacing:50px;
     font-weight: bold;
+    display: inline-block;
 }
+
+.upperBig1 span::first-letter {
+    color: rgb(6, 194, 194);
+    font-weight: bold;
+    font-size:200%;
+}
+
 
 .upperSmall{
     font-size: 1.8rem;
-    font-weight: bolder;
+    font-weight: normal;
+    font-style: sans-seriff;
     color: grey;
 }
+
+
 
 .topButtons{
     margin-top: 3rem;
@@ -64,7 +74,9 @@
 
 .btn:hover{
     filter: brightness(1.05);
+    filter: drop-shadow(16px 16px 10px darkgrey);
 }
+
 
 /* Features Part */
 
