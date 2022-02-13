@@ -1,7 +1,8 @@
 import React from "react";
 import './Addpatient.css'
-
+import { useUserContext} from '../context/UserContext'
 function Addpatient(){
+  const {user}=useUserContext();
 
   const submitHandler = (e) => {
        e.preventDefault();
@@ -13,7 +14,7 @@ function Addpatient(){
        },
 
         body: JSON.stringify(
-         {"hid" : "1",
+         {"hid" : user.metadata.createdAt,
          "pid" : e.target[0].value,
          "ref" : "no",
          "name": e.target[1].value,
@@ -22,10 +23,10 @@ function Addpatient(){
    })
 
     .then(response => response.json()) //Will get Success Response String/Array
-    .then(data => {
+    .then(alert("Patient Added Successfully")
     
-    console.log("HI HELLO");
-})
+   
+)
 .catch((error) => {
   //console.error('Error:', error);
 });

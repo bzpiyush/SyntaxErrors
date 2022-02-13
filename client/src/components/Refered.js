@@ -10,14 +10,12 @@ function Refered() {
 
   const [patients, setPatients] = useState([]);
 
-  const setData = ({ items }) => {
-    setPatients(items);
-  };
+  
 
   const submitHandler=(e)=>{
     e.preventDefault();
     
-  fetch('http://localhost:5000/enterpatient', {
+  fetch('http://localhost:5000/showreferred', {
   method: 'POST', // or 'PUT'
   headers: {
     'Content-Type': 'application/json',
@@ -27,11 +25,11 @@ function Refered() {
     "hid" : user.metadata.createdAt
   })
 })
-
-    .then(response => response.json())
-    .then((data) => setData(data))
-    .catch((error) => {
-  //console.error('Error:', error);
+.then((response) => {
+  //console.log(response);
+  response.json().then((data) => {
+    setPatients(data)
+  });
 });
     
   }
@@ -42,12 +40,7 @@ function Refered() {
               Show Refered Patients
           </button>
           <div className="patientCards">
-        <PatientCard 
-          patientName= "John Singh"
-          patientId= "547869441235"
-          patientDisease="Covid-190"
-          />
-        {patients.map((patient) => {
+        {patients.map((patient) => (
           <div key={patient.pid}>
             <PatientCard 
             patientId={patient.pid}
@@ -55,7 +48,7 @@ function Refered() {
             patientDisease={patient.disease}
           />
           </div>
-        })}
+        ))}
       </div>
         </div>
     )

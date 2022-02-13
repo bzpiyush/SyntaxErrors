@@ -11,6 +11,7 @@ function PatientCard({ patientName, patientId, patientDisease }) {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    handleClose()
    
     fetch('http://localhost:5000/enterpatient', {
      method: 'POST', // or 'PUT'

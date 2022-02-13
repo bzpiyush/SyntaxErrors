@@ -57,13 +57,13 @@ function Home() {
                <span>
                   <div className="card">
                   <i class="fa-solid fa-capsules icon"></i>
-                  <p className="CardHead">Seamless Connectivity</p>
+                  <p className="CardHead">Seamless Inter-connectivity </p>
                   <p className="CardText"></p>
                   </div>
                </span>
                <span>
                   <div className="card">
-                  <i class="fa-solid fa-hospital-user icon"></i>
+                  <i className="fa-solid fa-hospital-user icon"></i>
                   <p className="CardHead">Record Maintainence</p>
                   <p className="CardText"></p>
                   </div>

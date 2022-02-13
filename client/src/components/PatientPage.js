@@ -9,15 +9,13 @@ function PatientPage()
   const {user} = useUserContext();
   const [patients, setPatients] = useState([]);
 
-  const setData = ({ items }) => {
-    setPatients(items);
-  };
+  
 
 
   const submithandler=(e)=>{
     e.preventDefault();
     
-  fetch('http://localhost:5000/enterpatient', {
+  fetch('http://localhost:5000/showdatabase', {
   method: 'POST', // or 'PUT'
   headers: {
     'Content-Type': 'application/json',
@@ -28,11 +26,18 @@ function PatientPage()
   })
 })
 
-    .then(response => response.json())
-    .then((data) => setData(data))
+.then((response) => {
+  //console.log(response);
+  response.json().then((data) => {
+    setPatients(data)
+  });
+});
+
+    /*.then(response => response.json())
+    .then(console.log(data))
     .catch((error) => {
   //console.error('Error:', error);
-});
+});*/
     
   }
 
@@ -40,12 +45,7 @@ function PatientPage()
     <div className="patientPage">
       <button onClick={submithandler} className="btn btn-warning btn-lg showBtn" style={{fontSize: "1.6rem", marginBottom: "3rem"}}>Show Patients</button>
       <div className="patientCards">
-        <PatientCard 
-          patientName= "John Singh"
-          patientId= "547869441235"
-          patientDisease="Covid-190"
-          />
-        {patients.map((patient) => {
+        {patients.map((patient) => (
           <div key={patient.pid}>
             <PatientCard 
             patientId={patient.pid}
@@ -53,7 +53,7 @@ function PatientPage()
             patientDisease={patient.disease}
           />
           </div>
-        })}
+        ))}
       </div>
       </div>
   )
