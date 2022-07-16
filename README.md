@@ -1,4 +1,6 @@
-Hack a Web Hackathon 
+
+Description : This website makes referral of patients from one hospital to another
+very easy along with their complete record management
 
 Team: Syntax Errors
 
